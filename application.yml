@@ -13,4 +13,6 @@ management:
 info:
   author: Mateus Benites Dias
   mail: mateusdias@outlook.com
+server:
+  port: ${PORT:9999}
 message: This is a message
