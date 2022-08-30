@@ -1,0 +1,20 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info 
+info:
+  author: Marcelo Amaro Paduan Ramos
+  mail: marceloxpaduan@gmail.com
+server:
+  port: ${PORT:9999}
+message: Ola
