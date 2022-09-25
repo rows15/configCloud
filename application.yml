@@ -1,9 +1,24 @@
+spring:
+  zipkin:
+    base-url: http://zipkin-service:9411/
+  rabbitmq:
+    username: guest
+    password: guest
+    host: rabbitmq-service
+    port: 5672
+queue:
+  api-carro:
+    name: CarroQueue
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
 eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://eureka:8761/eureka/
 management:
   info:
     env:
@@ -11,10 +26,17 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info 
+        include: circuitbreakers,circuitbreakerevents,health,info
+  health:
+      circuitbreakers:
+          enabled: true
+  endpoint:
+    health:
+      show-details: always
 info:
-  author: Marcelo Amaro Paduan Ramos
-  mail: marceloxpaduan@gmail.com
+  author: Tulio L. Viglione
+  mail: tulio.l.viglione@gmail.com
 server:
   port: ${PORT:9999}
-message: Ola
+
+message: Generic
