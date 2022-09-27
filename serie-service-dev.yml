@@ -1,11 +1,11 @@
 server:
-  port: 8086
+  port: 8087
   servlet:
-    context-path: /movie/
+    context-path: /serie/
 
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/movie
+    url: jdbc:mysql://localhost:3306/series
     username: root
     password: colar1414

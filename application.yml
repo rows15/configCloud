@@ -7,8 +7,7 @@ spring:
     host: rabbitmq-service
     port: 5672
 queue:
-  api-carro:
-    name: CarroQueue
+  
   movie:
     name: MovieQueue
   serie:
@@ -34,9 +33,9 @@ management:
     health:
       show-details: always
 info:
-  author: Tulio L. Viglione
-  mail: tulio.l.viglione@gmail.com
+  author: Marcelo A. P. Ramos
+  mail: marceloxpaduan@gmail.com
 server:
   port: ${PORT:9999}
 
-message: Generic
+message: Generica
